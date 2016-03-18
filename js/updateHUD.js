@@ -2,7 +2,7 @@ var removeClasses = require('./../js/removeClasses').removeClasses;
 
 exports.updateHUD = function(currentTime){
   var totalMinutes = currentTime.totalMinutes;
-  // var totalMinutes = 389;
+  // var totalMinutes = 500;
   var sunrise = 420;
   var sunset = 1140;
 

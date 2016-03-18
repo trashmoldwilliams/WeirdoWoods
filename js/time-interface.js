@@ -3,20 +3,23 @@ var findWeather = require('./../js/findWeather').findWeather;
 
 $(document).ready(function(){
   currentTime = null;
+  currentWeather = null;
 
-  function Time(hour, minute, second) {
+  function Time(hour, minute) {
     this.hour = parseInt(hour);
     this.minute = parseInt(minute);
-    this.second = parseInt(second);
     this.totalMinutes = (this.hour * 60) + this.minute;
   }
 
-  findWeather();
+  updateInfo = function() {
+    currentWeather = findWeather();
+    currentTime = new Time(moment().format('HH'), moment().format('mm'));
+    updateHUD(currentTime);
 
-  // var i = setInterval(function() {
-  //   findWeather();
-  //   currentTime = new Time(moment().format('HH'), moment().format('mm'), moment().format('ss'));
-  //   updateHUD(currentTime);
-  //   console.log(currentTime);
-  // }, 1000);
+  }
+
+  updateInfo();
+  console.log(currentTime);
+  console.log(currentWeather);
+  var i = setInterval(updateInfo, 30000);
 });
