@@ -1,0 +1,22 @@
+$blue : #99ccff;
+$orange : #ff9966;
+$green : #006600;
+
+body {
+  text-align: center;
+}
+
+.day {
+  background-color: $blue;
+  color: $green;
+}
+
+.night {
+  background-color: black;
+  color: white;
+}
+
+.twilight {
+  background-color: $orange;
+  color: black;
+}

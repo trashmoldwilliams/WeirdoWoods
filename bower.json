@@ -1,9 +1,9 @@
 {
-  "name": "project-skeleton",
+  "name": "weirdo-woods",
   "description": "",
   "main": "index.js",
   "license": "ISC",
-  "homepage": "https://github.com/trashmoldwilliams/project-skeleton",
+  "homepage": "https://github.com/trashmoldwilliams/weirdo-woods",
   "moduleType": [],
   "ignore": [
     "**/.*",
