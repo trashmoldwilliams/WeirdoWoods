@@ -1,4 +1,5 @@
 var updateHUD = require('./../js/updateHUD').updateHUD;
+var findWeather = require('./../js/findWeather').findWeather;
 
 $(document).ready(function(){
   currentTime = null;
@@ -10,9 +11,12 @@ $(document).ready(function(){
     this.totalMinutes = (this.hour * 60) + this.minute;
   }
 
-  var i = setInterval(function() {
-    currentTime = new Time(moment().format('HH'), moment().format('mm'), moment().format('ss'));
-    updateHUD(currentTime);
-    console.log(currentTime);
-  }, 1000);
+  findWeather();
+
+  // var i = setInterval(function() {
+  //   findWeather();
+  //   currentTime = new Time(moment().format('HH'), moment().format('mm'), moment().format('ss'));
+  //   updateHUD(currentTime);
+  //   console.log(currentTime);
+  // }, 1000);
 });
